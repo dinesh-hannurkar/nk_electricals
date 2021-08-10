@@ -7,3 +7,4 @@ E:\Vision\nk_electricals\nk_electricals\obj\Debug\nk_electricals.csproj.Generate
 E:\Vision\nk_electricals\nk_electricals\obj\Debug\nk_electricals.csproj.CoreCompileInputs.cache
 E:\Vision\nk_electricals\nk_electricals\obj\Debug\nk_electricals.exe
 E:\Vision\nk_electricals\nk_electricals\obj\Debug\nk_electricals.pdb
+E:\Vision\nk_electricals\nk_electricals\obj\Debug\nk_electricals.Form1.resources
