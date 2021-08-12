@@ -1,23 +1,17 @@
-﻿using MySql.Data.MySqlClient;
-using nk_electricals.classes;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.Common;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-
 namespace nk_electricals
 {
     public partial class Form1 : Form
     {
-        Login obj = new Login();
-       
         public Form1()
         {
             InitializeComponent();
@@ -28,32 +22,23 @@ namespace nk_electricals
 
         }
 
-        private void btn_login_Click(object sender, EventArgs e)
+        private void close_Click(object sender, EventArgs e)
         {
-            string username = txt_username.Text;
-            string password = txt_password.Text;
-            bool response=obj.admin_login(username, password);
+            Application.Exit();
+        }
 
-            if(username=="" || password=="")
-            {
-                MessageBox.Show("Fields should not be empty");
-            }
-            else
-            {
-                if (response == true)
-                {
-                    Console.WriteLine("Login success");
-                    MessageBox.Show("Login success." + obj.admin_id);
-                }
-                else
-                {
-                    Console.WriteLine("Username/password wrong");
-                    MessageBox.Show("Invalid username/password."+obj.admin_id);
-                }
-            }
-            
+        private void minimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
 
-            
+        private void bottom_line_Paint(object sender, PaintEventArgs e)
+        {
+           ControlPaint.DrawBorder(e.Graphics, bottom_line.ClientRectangle,
+           Color.White, 0, ButtonBorderStyle.Solid, // left
+           Color.DimGray, 0, ButtonBorderStyle.Solid, // top
+           Color.DimGray, 0, ButtonBorderStyle.Solid, // right
+           Color.DimGray, 1, ButtonBorderStyle.Solid);// bottom
         }
     }
 }
