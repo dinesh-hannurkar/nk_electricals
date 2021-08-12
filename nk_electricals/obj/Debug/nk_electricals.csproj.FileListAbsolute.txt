@@ -21,3 +21,6 @@ E:\c#\pro\nk_electricals\nk_electricals\bin\Debug\MySql.Data.dll
 E:\c#\pro\nk_electricals\nk_electricals\bin\Debug\MySql.Data.Entity.dll
 E:\c#\pro\nk_electricals\nk_electricals\obj\Debug\nk_electricals.csproj.AssemblyReference.cache
 E:\c#\pro\nk_electricals\nk_electricals\obj\Debug\nk_electricals.csproj.CopyComplete
+E:\Vision\nk_electricals\nk_electricals\bin\Debug\MySql.Data.dll
+E:\Vision\nk_electricals\nk_electricals\bin\Debug\MySql.Data.Entity.dll
+E:\Vision\nk_electricals\nk_electricals\obj\Debug\nk_electricals.csproj.CopyComplete
