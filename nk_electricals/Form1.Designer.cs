@@ -29,17 +29,23 @@
         private void InitializeComponent()
         {
             this.main_panel = new System.Windows.Forms.Panel();
-            this.header = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.login_panel = new System.Windows.Forms.Panel();
-            this.txt_username = new System.Windows.Forms.TextBox();
-            this.txt_password = new System.Windows.Forms.TextBox();
             this.btn_login = new System.Windows.Forms.Button();
+            this.txt_password = new System.Windows.Forms.TextBox();
+            this.txt_username = new System.Windows.Forms.TextBox();
+            this.header = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lbl_username = new System.Windows.Forms.Label();
+            this.lbl_password = new System.Windows.Forms.Label();
+            this.lbl_logintitle = new System.Windows.Forms.Label();
+            this.minimize = new System.Windows.Forms.Button();
+            this.close = new System.Windows.Forms.Button();
+            this.bottom_line = new System.Windows.Forms.Panel();
             this.main_panel.SuspendLayout();
-            this.header.SuspendLayout();
             this.panel1.SuspendLayout();
             this.login_panel.SuspendLayout();
+            this.header.SuspendLayout();
             this.SuspendLayout();
             // 
             // main_panel
@@ -53,10 +59,69 @@
             this.main_panel.Size = new System.Drawing.Size(1096, 624);
             this.main_panel.TabIndex = 0;
             // 
+            // panel1
+            // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.login_panel);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 43);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1094, 579);
+            this.panel1.TabIndex = 1;
+            // 
+            // login_panel
+            // 
+            this.login_panel.BackColor = System.Drawing.Color.White;
+            this.login_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.login_panel.Controls.Add(this.lbl_logintitle);
+            this.login_panel.Controls.Add(this.bottom_line);
+            this.login_panel.Controls.Add(this.lbl_password);
+            this.login_panel.Controls.Add(this.lbl_username);
+            this.login_panel.Controls.Add(this.btn_login);
+            this.login_panel.Controls.Add(this.txt_password);
+            this.login_panel.Controls.Add(this.txt_username);
+            this.login_panel.Location = new System.Drawing.Point(365, 63);
+            this.login_panel.Name = "login_panel";
+            this.login_panel.Size = new System.Drawing.Size(363, 451);
+            this.login_panel.TabIndex = 0;
+            // 
+            // btn_login
+            // 
+            this.btn_login.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.btn_login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_login.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_login.Location = new System.Drawing.Point(60, 368);
+            this.btn_login.Name = "btn_login";
+            this.btn_login.Size = new System.Drawing.Size(245, 32);
+            this.btn_login.TabIndex = 2;
+            this.btn_login.Text = "SIGN IN";
+            this.btn_login.UseVisualStyleBackColor = false;
+            // 
+            // txt_password
+            // 
+            this.txt_password.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_password.Location = new System.Drawing.Point(58, 207);
+            this.txt_password.Name = "txt_password";
+            this.txt_password.PasswordChar = '*';
+            this.txt_password.Size = new System.Drawing.Size(245, 29);
+            this.txt_password.TabIndex = 1;
+            this.txt_password.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txt_username
+            // 
+            this.txt_username.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_username.Location = new System.Drawing.Point(59, 143);
+            this.txt_username.Name = "txt_username";
+            this.txt_username.Size = new System.Drawing.Size(245, 29);
+            this.txt_username.TabIndex = 0;
+            this.txt_username.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // header
             // 
             this.header.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(80)))), ((int)(((byte)(141)))));
+            this.header.Controls.Add(this.minimize);
             this.header.Controls.Add(this.label1);
+            this.header.Controls.Add(this.close);
             this.header.Dock = System.Windows.Forms.DockStyle.Top;
             this.header.Location = new System.Drawing.Point(0, 0);
             this.header.Name = "header";
@@ -74,49 +139,77 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "NK ELECTRICALS";
             // 
-            // panel1
+            // lbl_username
             // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.login_panel);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 43);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1094, 579);
-            this.panel1.TabIndex = 1;
+            this.lbl_username.AutoSize = true;
+            this.lbl_username.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_username.Location = new System.Drawing.Point(56, 119);
+            this.lbl_username.Name = "lbl_username";
+            this.lbl_username.Size = new System.Drawing.Size(83, 21);
+            this.lbl_username.TabIndex = 3;
+            this.lbl_username.Text = "Username";
             // 
-            // login_panel
+            // lbl_password
             // 
-            this.login_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.login_panel.Controls.Add(this.btn_login);
-            this.login_panel.Controls.Add(this.txt_password);
-            this.login_panel.Controls.Add(this.txt_username);
-            this.login_panel.Location = new System.Drawing.Point(306, 153);
-            this.login_panel.Name = "login_panel";
-            this.login_panel.Size = new System.Drawing.Size(481, 271);
-            this.login_panel.TabIndex = 0;
+            this.lbl_password.AutoSize = true;
+            this.lbl_password.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_password.Location = new System.Drawing.Point(56, 183);
+            this.lbl_password.Name = "lbl_password";
+            this.lbl_password.Size = new System.Drawing.Size(79, 21);
+            this.lbl_password.TabIndex = 4;
+            this.lbl_password.Text = "Password";
             // 
-            // txt_username
+            // lbl_logintitle
             // 
-            this.txt_username.Location = new System.Drawing.Point(176, 69);
-            this.txt_username.Name = "txt_username";
-            this.txt_username.Size = new System.Drawing.Size(100, 20);
-            this.txt_username.TabIndex = 0;
+            this.lbl_logintitle.AutoSize = true;
+            this.lbl_logintitle.Font = new System.Drawing.Font("Yu Gothic UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_logintitle.Location = new System.Drawing.Point(53, 21);
+            this.lbl_logintitle.Name = "lbl_logintitle";
+            this.lbl_logintitle.Size = new System.Drawing.Size(116, 37);
+            this.lbl_logintitle.TabIndex = 5;
+            this.lbl_logintitle.Text = "SIGN IN";
             // 
-            // txt_password
+            // minimize
             // 
-            this.txt_password.Location = new System.Drawing.Point(176, 116);
-            this.txt_password.Name = "txt_password";
-            this.txt_password.Size = new System.Drawing.Size(100, 20);
-            this.txt_password.TabIndex = 1;
+            this.minimize.BackColor = System.Drawing.Color.Transparent;
+            this.minimize.BackgroundImage = global::nk_electricals.Properties.Resources.icons8_negative_25px;
+            this.minimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.minimize.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.minimize.FlatAppearance.BorderSize = 0;
+            this.minimize.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.minimize.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.minimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.minimize.Location = new System.Drawing.Point(1029, 10);
+            this.minimize.Name = "minimize";
+            this.minimize.Size = new System.Drawing.Size(22, 22);
+            this.minimize.TabIndex = 1;
+            this.minimize.UseVisualStyleBackColor = false;
+            this.minimize.Click += new System.EventHandler(this.minimize_Click);
             // 
-            // btn_login
+            // close
             // 
-            this.btn_login.Location = new System.Drawing.Point(176, 154);
-            this.btn_login.Name = "btn_login";
-            this.btn_login.Size = new System.Drawing.Size(75, 23);
-            this.btn_login.TabIndex = 2;
-            this.btn_login.Text = "button1";
-            this.btn_login.UseVisualStyleBackColor = true;
+            this.close.BackColor = System.Drawing.Color.Transparent;
+            this.close.BackgroundImage = global::nk_electricals.Properties.Resources.close2;
+            this.close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.close.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.close.FlatAppearance.BorderSize = 0;
+            this.close.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.close.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.close.Location = new System.Drawing.Point(1060, 9);
+            this.close.Name = "close";
+            this.close.Size = new System.Drawing.Size(23, 23);
+            this.close.TabIndex = 2;
+            this.close.UseVisualStyleBackColor = false;
+            this.close.Click += new System.EventHandler(this.close_Click);
+            // 
+            // bottom_line
+            // 
+            this.bottom_line.Location = new System.Drawing.Point(58, 17);
+            this.bottom_line.Name = "bottom_line";
+            this.bottom_line.Size = new System.Drawing.Size(247, 51);
+            this.bottom_line.TabIndex = 6;
+            this.bottom_line.Paint += new System.Windows.Forms.PaintEventHandler(this.bottom_line_Paint);
             // 
             // Form1
             // 
@@ -129,11 +222,11 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.main_panel.ResumeLayout(false);
-            this.header.ResumeLayout(false);
-            this.header.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.login_panel.ResumeLayout(false);
             this.login_panel.PerformLayout();
+            this.header.ResumeLayout(false);
+            this.header.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -148,6 +241,12 @@
         private System.Windows.Forms.Button btn_login;
         private System.Windows.Forms.TextBox txt_password;
         private System.Windows.Forms.TextBox txt_username;
+        private System.Windows.Forms.Label lbl_logintitle;
+        private System.Windows.Forms.Label lbl_password;
+        private System.Windows.Forms.Label lbl_username;
+        private System.Windows.Forms.Button minimize;
+        private System.Windows.Forms.Button close;
+        private System.Windows.Forms.Panel bottom_line;
     }
 }
 
