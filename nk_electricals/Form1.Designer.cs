@@ -31,17 +31,18 @@
             this.main_panel = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.login_panel = new System.Windows.Forms.Panel();
+            this.lbl_logintitle = new System.Windows.Forms.Label();
+            this.bottom_line = new System.Windows.Forms.Panel();
+            this.lbl_password = new System.Windows.Forms.Label();
+            this.lbl_username = new System.Windows.Forms.Label();
             this.btn_login = new System.Windows.Forms.Button();
             this.txt_password = new System.Windows.Forms.TextBox();
             this.txt_username = new System.Windows.Forms.TextBox();
             this.header = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lbl_username = new System.Windows.Forms.Label();
-            this.lbl_password = new System.Windows.Forms.Label();
-            this.lbl_logintitle = new System.Windows.Forms.Label();
             this.minimize = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.close = new System.Windows.Forms.Button();
-            this.bottom_line = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.main_panel.SuspendLayout();
             this.panel1.SuspendLayout();
             this.login_panel.SuspendLayout();
@@ -73,6 +74,7 @@
             // 
             this.login_panel.BackColor = System.Drawing.Color.White;
             this.login_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.login_panel.Controls.Add(this.label2);
             this.login_panel.Controls.Add(this.lbl_logintitle);
             this.login_panel.Controls.Add(this.bottom_line);
             this.login_panel.Controls.Add(this.lbl_password);
@@ -84,6 +86,44 @@
             this.login_panel.Name = "login_panel";
             this.login_panel.Size = new System.Drawing.Size(363, 451);
             this.login_panel.TabIndex = 0;
+            // 
+            // lbl_logintitle
+            // 
+            this.lbl_logintitle.AutoSize = true;
+            this.lbl_logintitle.Font = new System.Drawing.Font("Yu Gothic UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_logintitle.Location = new System.Drawing.Point(53, 21);
+            this.lbl_logintitle.Name = "lbl_logintitle";
+            this.lbl_logintitle.Size = new System.Drawing.Size(116, 37);
+            this.lbl_logintitle.TabIndex = 5;
+            this.lbl_logintitle.Text = "SIGN IN";
+            // 
+            // bottom_line
+            // 
+            this.bottom_line.Location = new System.Drawing.Point(58, 17);
+            this.bottom_line.Name = "bottom_line";
+            this.bottom_line.Size = new System.Drawing.Size(247, 51);
+            this.bottom_line.TabIndex = 6;
+            this.bottom_line.Paint += new System.Windows.Forms.PaintEventHandler(this.bottom_line_Paint);
+            // 
+            // lbl_password
+            // 
+            this.lbl_password.AutoSize = true;
+            this.lbl_password.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_password.Location = new System.Drawing.Point(56, 183);
+            this.lbl_password.Name = "lbl_password";
+            this.lbl_password.Size = new System.Drawing.Size(79, 21);
+            this.lbl_password.TabIndex = 4;
+            this.lbl_password.Text = "Password";
+            // 
+            // lbl_username
+            // 
+            this.lbl_username.AutoSize = true;
+            this.lbl_username.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_username.Location = new System.Drawing.Point(56, 119);
+            this.lbl_username.Name = "lbl_username";
+            this.lbl_username.Size = new System.Drawing.Size(83, 21);
+            this.lbl_username.TabIndex = 3;
+            this.lbl_username.Text = "Username";
             // 
             // btn_login
             // 
@@ -128,47 +168,6 @@
             this.header.Size = new System.Drawing.Size(1094, 43);
             this.header.TabIndex = 0;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Yu Gothic UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(11, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(157, 25);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "NK ELECTRICALS";
-            // 
-            // lbl_username
-            // 
-            this.lbl_username.AutoSize = true;
-            this.lbl_username.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_username.Location = new System.Drawing.Point(56, 119);
-            this.lbl_username.Name = "lbl_username";
-            this.lbl_username.Size = new System.Drawing.Size(83, 21);
-            this.lbl_username.TabIndex = 3;
-            this.lbl_username.Text = "Username";
-            // 
-            // lbl_password
-            // 
-            this.lbl_password.AutoSize = true;
-            this.lbl_password.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_password.Location = new System.Drawing.Point(56, 183);
-            this.lbl_password.Name = "lbl_password";
-            this.lbl_password.Size = new System.Drawing.Size(79, 21);
-            this.lbl_password.TabIndex = 4;
-            this.lbl_password.Text = "Password";
-            // 
-            // lbl_logintitle
-            // 
-            this.lbl_logintitle.AutoSize = true;
-            this.lbl_logintitle.Font = new System.Drawing.Font("Yu Gothic UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_logintitle.Location = new System.Drawing.Point(53, 21);
-            this.lbl_logintitle.Name = "lbl_logintitle";
-            this.lbl_logintitle.Size = new System.Drawing.Size(116, 37);
-            this.lbl_logintitle.TabIndex = 5;
-            this.lbl_logintitle.Text = "SIGN IN";
-            // 
             // minimize
             // 
             this.minimize.BackColor = System.Drawing.Color.Transparent;
@@ -185,6 +184,17 @@
             this.minimize.TabIndex = 1;
             this.minimize.UseVisualStyleBackColor = false;
             this.minimize.Click += new System.EventHandler(this.minimize_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Yu Gothic UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(11, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(157, 25);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "NK ELECTRICALS";
             // 
             // close
             // 
@@ -203,13 +213,14 @@
             this.close.UseVisualStyleBackColor = false;
             this.close.Click += new System.EventHandler(this.close_Click);
             // 
-            // bottom_line
+            // label2
             // 
-            this.bottom_line.Location = new System.Drawing.Point(58, 17);
-            this.bottom_line.Name = "bottom_line";
-            this.bottom_line.Size = new System.Drawing.Size(247, 51);
-            this.bottom_line.TabIndex = 6;
-            this.bottom_line.Paint += new System.Windows.Forms.PaintEventHandler(this.bottom_line_Paint);
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(59, 243);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "label2";
             // 
             // Form1
             // 
@@ -247,6 +258,7 @@
         private System.Windows.Forms.Button minimize;
         private System.Windows.Forms.Button close;
         private System.Windows.Forms.Panel bottom_line;
+        private System.Windows.Forms.Label label2;
     }
 }
 
