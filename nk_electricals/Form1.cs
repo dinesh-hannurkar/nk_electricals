@@ -22,25 +22,6 @@ namespace nk_electricals
 
         }
 
-        private void close_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void minimize_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
-
-        private void bottom_line_Paint(object sender, PaintEventArgs e)
-        {
-           ControlPaint.DrawBorder(e.Graphics, bottom_line.ClientRectangle,
-           Color.White, 0, ButtonBorderStyle.Solid, // left
-           Color.DimGray, 0, ButtonBorderStyle.Solid, // top
-           Color.DimGray, 0, ButtonBorderStyle.Solid, // right
-           Color.DimGray, 1, ButtonBorderStyle.Solid);// bottom
-        }
-
         private void btn_login_Click(object sender, EventArgs e)
         {
 
